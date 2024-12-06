@@ -34,6 +34,9 @@ class minmax_constraint(Constraint):
 
     def __call__(self, w):
         return tf.clip_by_value(w, self.min_value, self.max_value)
+#added this to make changes in the code
+def greet_user(name):
+    print(f"Hello, ! Welcome to the Python Lab.")
 
 def update_progress(progress):
     barLength = 10 # Modify this to change the length of the progress bar
@@ -251,6 +254,8 @@ class LinearFirst(keras.layers.Layer):
         return mu_out, Sigma_out, kl_fc
 
 # # mywork
+
+
 
 
 
