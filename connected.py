@@ -35,6 +35,7 @@ class minmax_constraint(Constraint):
     def __call__(self, w):
         return tf.clip_by_value(w, self.min_value, self.max_value)
 
+
 def update_progress(progress):
     barLength = 10 # Modify this to change the length of the progress bar
     status = ""
@@ -254,6 +255,8 @@ class LinearFirst(keras.layers.Layer):
 
 
 
+
+
 class LinearNotFirst(keras.layers.Layer):
     """y = w.x + b"""
     def __init__(self, units,**kwargs):
@@ -366,9 +369,11 @@ class Density_prop_DNN(tf.keras.Model):
 
         return mu_out, Sigma_out, kl_total
 
-    # I have changed the test4 to tes5 name for github assignment3
+
+    # I have changed the test4 to tes5t2name for github assignment3
         # I have changed the test4 to tes5 name for github assignment3
-wandb.init(project="Test5" ) #, entity="your_wandb_username")
+wandb.init(project="Test2" ) #, entity="your_wandb_username")
+
 
 def main_function(image_size=28, units1=200, units2=100, units3=10, epochs=20,  lr=0.0001, lr_end=0.00001,
                   batch_size=50, num_classes=10,kl_factor=0.01,Training = True, Testing= False, Random_noise=False, gaussain_noise_std=0.25):
